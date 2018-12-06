@@ -1,11 +1,15 @@
 {
-  "name": "exif_module",
+  "name": "weather_module",
   "version": "1.0.0",
-  "description": "Give you exif informations while reading every pictures in a specified folder",
+  "description": "Give you weather of the city of your choice, for the day or the week, as you prefer.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "drallireeh",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "prompt": "^1.0.0"
+  }
 }
