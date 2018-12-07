@@ -1,12 +1,13 @@
 const ora = require('ora');
-const getWeather = require('./weather');
+const getWeather = require('./weather.js');
+const getLocation = require('./location.js');
 
 module.exports = async (args) => {
     const spinner = ora().start();
 
     try {
-        const location = args.location || args.l;
-        const weather = await getWeather(location);
+        const location = args.location || args.l || await getLocation()
+        const weather = await getWeather(location)
 
         spinner.stop();
 
@@ -19,6 +20,6 @@ module.exports = async (args) => {
     } catch (err) {
         spinner.stop();
 
-        throw err;
+        console.error(err);
     }
 };
