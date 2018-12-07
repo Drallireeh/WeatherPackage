@@ -1,25 +1,23 @@
 const menus = {
     main: `
-        outside [command] <options>
+        node index.js [command] <options>
   
-        today     ............    show weather for today
-        forecast  ............    show weather for a week since today
-        help      ............    show help menu for a command`,
+        today       ............      show weather for today
+        forecast    ............      show weather for a week since today
+        help        ............      show help menu for a command`,
 
     today: `
-        outside today <options>
+        node index.js today <options>
   
-        --location, -l .......    the location to use`,
+        --location, -l .......      the location to use`,
     week: `
-        outside week <options>
+        node index.js week <options>
 
-        --location, -l ..... the location to use`,
+        --location, -l .......      the location to use`,
 };
 
 module.exports = (args) => {
-    const sub_settings = args._[0] === 'help'
-        ? args._[1]
-        : args._[0]
+    const sub_settings = args._[0] === 'help' ? args._[1] : args._[0];
 
-    console.log(menus[sub_settings] || menus.main)
+    console.log(menus[sub_settings] || menus.main);
 };
