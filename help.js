@@ -3,17 +3,17 @@ const menus = {
         node index.js [command] <options>
   
         today       ............      show weather for today
-        forecast    ............      show weather for a week since today
+        week       ............      show weather for a week since today
         help        ............      show help menu for a command`,
 
     today: `
         node index.js today <options>
   
-        --location, -l .......      the location to use`,
+        --location, -l .......      the location to use. (ex : "Paris, France")`,
     week: `
         node index.js week <options>
 
-        --location, -l .......      the location to use`,
+        --location, -l .......      the location to use. (ex : "Paris, France")`,
 };
 
 module.exports = (args) => {
