@@ -3,6 +3,8 @@ const chalk = require('chalk');
 const minimist = require('minimist');
 
 const help_menu = require("./help.js");
+const today_option = require('./today');
+const week_option = require('./week');
 
 app = {
 	title: figlet.textSync('Weather Channel', "Ogre"),
@@ -12,33 +14,33 @@ app = {
 }
 
 app.log_title();
-const arg = GetArgs();
 
 function GetArgs() {
 	return minimist(process.argv.slice(2));
 }
 
-function CheckSettings(args) {
-	let settings = args._[0] || 'help';
+function CheckCommand(args) {
+	let command = args._[0] || 'help';
 
 	if (args.help || args.h) {
-		settings = 'help';
+		command = 'help';
 	}
 
-	switch (settings) {
+	switch (command) {
 		case 'today':
-			require('./today')(args);
+			today_option(args);
 			break
 		case 'help':
 			help_menu(args);
 			break;
 		case 'week':
-			require('./week')(args);
+			week_option(args);
 			break;
 		default:
-			console.error(`${settings} is not a valid command! type help to have some tips`);
+			console.error(`${command} is not a valid command! type help to have some tips`);
 			break
 	}
 }
 
-CheckSettings(arg);
+const arg = GetArgs();
+CheckCommand(arg);

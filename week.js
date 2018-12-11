@@ -12,9 +12,9 @@ module.exports = async (args) => {
         spinner.stop();
 
         console.log(`Weather week for ${location}:`);
-        weather.forecast.every(function (item) {
-            console.log(`\t${item.date} - Low: ${Math.round((item.low - 32) * 5 / 9)}°  | High: ${Math.round((item.high - 32) * 5 / 9)}°    | ${item.text}`);
-            if (item === weather.forecast[6]) return false;
+        weather.forecast.every(function (weather_info) {
+            console.log(`\t${weather_info.date} - Low: ${Math.round((weather_info.low - 32) * 5 / 9)}°  | High: ${Math.round((weather_info.high - 32) * 5 / 9)}°    | ${weather_info.text}`);
+            if (weather_info === weather.forecast[6]) return false;
             return true;
         });
     } catch (err) {

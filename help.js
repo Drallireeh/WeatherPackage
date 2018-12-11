@@ -4,7 +4,9 @@ const menus = {
   
         today       ----------      show weather for today
         week        ----------      show weather for a week since today
-        help        ----------      show help menu for a command`,
+        help        ----------      show help menu for a command
+        
+        You'll need your api_key if you wan't your computer to find location by himself.`,
 
     today: `
         node index.js today <options>
