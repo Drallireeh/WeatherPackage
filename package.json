@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "drallireeh",
-  "license": "ISC",
+  "license": "Do What The F*ck You Want To Public License",
   "dependencies": {
     "axios": "^0.18.0",
     "chalk": "^2.4.1",
