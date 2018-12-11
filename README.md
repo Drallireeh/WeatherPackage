@@ -1,6 +1,10 @@
 # WeatherPackage
 Npm package to know weather at any location
 
-to use it : node index.js [command] <options>
+to use it : 
 
-type "help" to get some tips.
+Clone this folder, then be sure you have node on your computer. 
+
+Then, type this : node index.js [command] <options>
+
+type command "help" to have more informations
