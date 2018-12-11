@@ -1,5 +1,7 @@
 const axios = require('axios');
 
+// Get your own location automatically.
+
 module.exports = async () => {
     const results = await axios({
         method: 'get',

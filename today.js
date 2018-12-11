@@ -9,7 +9,7 @@ module.exports = async (args) => {
         const location = args.location || args.l || await getLocation();
         const weather = await getWeather(location);
 
-        weather.condition.temp = Math.round((weather.condition.temp - 32) * 5 / 9);
+        weather.condition.temp = Math.round((weather.condition.temp - 32) * 5 / 9); // Convert kelvin into Celcius
 
         loading_spin.stop();
 

@@ -16,10 +16,17 @@ app = {
 
 app.log_title();
 
+/**
+ * Parse command and arguments into object to use it
+ */
 function GetArgs() {
 	return minimist(process.argv.slice(2));
 }
 
+/**
+ * 
+ * @param {} args look at the command entered by the user
+ */
 function CheckCommand(args) {
 	let command = args._[0] || 'help';
 
