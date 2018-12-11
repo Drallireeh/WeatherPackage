@@ -6,8 +6,8 @@ module.exports = async (args) => {
     const loading_spin = ora().start();
 
     try {
-        const location = args.location || args.l || await getLocation()
-        const weather = await getWeather(location)
+        const location = args.location || args.l || await getLocation();
+        const weather = await getWeather(location);
 
         weather.condition.temp = Math.round((weather.condition.temp - 32) * 5 / 9);
 
@@ -20,4 +20,4 @@ module.exports = async (args) => {
 
         console.error(err);
     }
-}
+};
